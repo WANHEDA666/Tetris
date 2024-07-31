@@ -1,0 +1,37 @@
+{
+  "project_info": {
+    "project_number": "54269206720",
+    "firebase_url": "https://tetris-4d181-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "tetris-4d181",
+    "storage_bucket": "tetris-4d181.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:54269206720:ios:401fc45a5552a5c110cd25",
+        "android_client_info": {
+          "package_name": "com.hedax.tetris"
+        }
+      },
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXBiKvEL72ycmEAVyed14vVHToWqmpgJ0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 0
+        },
+        "appinvite_service": {
+          "status": 1
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "54269206720-i7f70er3d65gepqav79t1dbbq05gehgt.apps.googleusercontent.com"
+        }
+      ]
+    }
+  ],
+  "configuration_version": "1"
+}
