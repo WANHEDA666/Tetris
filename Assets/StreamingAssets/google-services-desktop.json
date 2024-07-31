@@ -8,9 +8,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:54269206720:ios:401fc45a5552a5c110cd25",
+        "mobilesdk_app_id": "1:54269206720:ios:ba0752e3e236810810cd25",
         "android_client_info": {
-          "package_name": "com.hedax.tetris"
+          "package_name": "uk.co.licorsoftltd.droptheblock"
         }
       },
       "api_key": [
@@ -28,7 +28,7 @@
       },
       "oauth_client": [
         {
-          "client_id": "54269206720-i7f70er3d65gepqav79t1dbbq05gehgt.apps.googleusercontent.com"
+          "client_id": "54269206720-6pp9i3lh8lqqmt56dmdvi4m4lpsvmqqd.apps.googleusercontent.com"
         }
       ]
     }
