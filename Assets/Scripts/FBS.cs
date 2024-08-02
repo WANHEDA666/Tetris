@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,34 +7,22 @@ using Firebase.Messaging;
 public class FBS : MonoBehaviour
 {
     [SerializeField] private WebScreen WebScreen;
-    
-    public void Awake() 
-    {
-        Firebase.Messaging.FirebaseMessaging.TokenRegistrationOnInitEnabled = true;
-        Firebase.FirebaseApp.CheckAndFixDependenciesAsync().ContinueWith(task => {
-            var dependencyStatus = task.Result;
-            if (dependencyStatus == Firebase.DependencyStatus.Available) {
-                // Create and hold a reference to your FirebaseApp,
-                // where app is a Firebase.FirebaseApp property of your application class.
-                Firebase.FirebaseApp app = Firebase.FirebaseApp.DefaultInstance;
-                Firebase.Messaging.FirebaseMessaging.RequestPermissionAsync().ContinueWith(task =>
-                {
-                    if (task.IsCompleted)
-                    {
-                        WebScreen.StartWeb();
-                    }
-                });
-                //WebScreen.StartWeb();
-                // Set a flag here to indicate whether Firebase is ready to use by your app.
-            } else {
-                UnityEngine.Debug.LogError(System.String.Format(
-                    "Could not resolve all Firebase dependencies: {0}", dependencyStatus));
-                // Firebase Unity SDK is not safe to use here.
-            }
-        });
 
-        Firebase.Messaging.FirebaseMessaging.TokenReceived += OnTokenReceived;
-        Firebase.Messaging.FirebaseMessaging.MessageReceived += OnMessageReceived;
+    public void Start() 
+    {
+        if (PlayerPrefs.GetInt("Requested") == 0)
+        {
+            Firebase.FirebaseApp.CheckAndFixDependenciesAsync().ContinueWith(task => {
+                Firebase.Messaging.FirebaseMessaging.TokenReceived += OnTokenReceived;
+                Firebase.Messaging.FirebaseMessaging.MessageReceived += OnMessageReceived;
+                PlayerPrefs.SetInt("Requested", 1);
+                WebScreen.StartWeb();
+            });
+        }
+        else
+        {
+            WebScreen.StartWeb();
+        }
     }
 
     public void OnTokenReceived(object sender, Firebase.Messaging.TokenReceivedEventArgs token) 
@@ -44,5 +33,17 @@ public class FBS : MonoBehaviour
     public void OnMessageReceived(object sender, Firebase.Messaging.MessageReceivedEventArgs e) 
     {
         UnityEngine.Debug.Log("Received a new message from: " + e.Message.From);
+    }
+
+    private void OnDisable()
+    {
+        Firebase.Messaging.FirebaseMessaging.TokenReceived -= OnTokenReceived;
+        Firebase.Messaging.FirebaseMessaging.MessageReceived -= OnMessageReceived;
+    }
+
+    private void OnDestroy()
+    {
+        Firebase.Messaging.FirebaseMessaging.TokenReceived -= OnTokenReceived;
+        Firebase.Messaging.FirebaseMessaging.MessageReceived -= OnMessageReceived;
     }
 }
