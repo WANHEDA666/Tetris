@@ -8,7 +8,7 @@ public class WebScreen : MonoBehaviour
     [SerializeField] private ButtonsController _buttonsController;
     private UniWebView webView;
 
-    private void Start()
+    public void StartWeb()
     {
         if (PlayerPrefs.GetInt("addedURL") == 0)
         {
