@@ -8,9 +8,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:54269206720:ios:3e3d105ec9acb69010cd25",
+        "mobilesdk_app_id": "1:54269206720:ios:c46502225cf71cb710cd25",
         "android_client_info": {
-          "package_name": "com.licorsoft.blocksymphony.app"
+          "package_name": "com.licorsoft.tetramind.app"
         }
       },
       "api_key": [
@@ -28,7 +28,7 @@
       },
       "oauth_client": [
         {
-          "client_id": "54269206720-25vl9rqitd4qhji2kl5tmll0khodt38j.apps.googleusercontent.com"
+          "client_id": "54269206720-eonb9bbtnni9io2td9icarv73vcpdodi.apps.googleusercontent.com"
         }
       ]
     }
