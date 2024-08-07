@@ -8,9 +8,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:54269206720:ios:ba0752e3e236810810cd25",
+        "mobilesdk_app_id": "1:54269206720:ios:19e1d52309826cc810cd25",
         "android_client_info": {
-          "package_name": "uk.co.licorsoftltd.droptheblock"
+          "package_name": "com.licorsoft.blockblitz.app"
         }
       },
       "api_key": [
@@ -28,7 +28,7 @@
       },
       "oauth_client": [
         {
-          "client_id": "54269206720-6pp9i3lh8lqqmt56dmdvi4m4lpsvmqqd.apps.googleusercontent.com"
+          "client_id": "54269206720-j7tf4g9l6otcgfan6srplr82g48h4r7f.apps.googleusercontent.com"
         }
       ]
     }
