@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>54269206720-eonb9bbtnni9io2td9icarv73vcpdodi.apps.googleusercontent.com</string>
+	<string>54269206720-dbue5pie26c9nf1sq61g20bvo6ucajmd.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.54269206720-eonb9bbtnni9io2td9icarv73vcpdodi</string>
+	<string>com.googleusercontent.apps.54269206720-dbue5pie26c9nf1sq61g20bvo6ucajmd</string>
 	<key>API_KEY</key>
 	<string>AIzaSyBXBiKvEL72ycmEAVyed14vVHToWqmpgJ0</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.licorsoft.tetramind.app</string>
+	<string>com.licorsoft.tetrascape.app</string>
 	<key>PROJECT_ID</key>
 	<string>tetris-4d181</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,7 +29,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:54269206720:ios:c46502225cf71cb710cd25</string>
+	<string>1:54269206720:ios:c6c74e838e9443fc10cd25</string>
 	<key>DATABASE_URL</key>
 	<string>https://tetris-4d181-default-rtdb.europe-west1.firebasedatabase.app</string>
 </dict>
